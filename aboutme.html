@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>个人网页--About Me</title>
+	<style>
+		.daohang{
+			background-color: rgb(255, 255, 255);
+			width:100%;
+			height:fit-content;
+			position:fixed;
+			box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 10px -1px,
+			rgb(0 0 0 / 14%) 0px 1px 10px 0px, rgb(0 0 0 / 12%) 0px 1px 10px 0px;
+			
+		}
+		*{
+			margin: 0;
+			padding:0;
+			text-decoration: none;
+			list-style: none;
+		}
+		.logo{
+			float: left;
+			display: inline-block;
+			background-color: white;
+			height:50px;
+			width:50px;
+			overflow: hidden;
+		}
+		.logo img{
+			height:50px;
+		}
+		.logo:hover{
+			background-color:#b0aca637;
+			overflow: visible;
+		}
+		.writeletter{
+			background-color: #FFFFFF;
+    		text-align:center;
+			width: 250px;
+			height: 45px; 
+			line-height: 45px;
+			border: 2px solid black;
+			overflow:hidden;
+			border-radius: 18px;
+		}
+
+		.writeletter:hover{
+		background-color:rgba(0, 191, 255, 0.849);
+		overflow:visible;
+		}
+		.item{
+			position: fixed;
+			right:20px;
+			margin: 7px 0px;
+			padding: 0;
+			display: flex;
+			border: 2px solid black;
+			}
+		.item li{
+			list-style: none;
+		}
+		.item li a{
+			position: relative;
+			display:inline-block;
+			padding: 10px 20px; 
+			text-decoration: none;
+			color: #262626;
+			line-height: 10px;
+
+		}
+		.item li a:hover{
+			color:#fff;
+		}
+		.item li a:before{
+			content:'';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-top:1px solid #000;
+			border-bottom:1px solid #000;
+			transform: scaleY(2);
+			opacity: 0;
+			transition: 0.5s;
+			z-index: -1;
+		}
+		.item li a:hover:before{
+			transform: scaleY(1);
+			opacity:1;
+		}
+		.item li a:after{
+			content:'';
+			position: absolute;
+			top:0px;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #000;
+			transform: scale(0);
+			transition: 0.5s;
+			z-index: -1;
+		}
+		.item li a:hover:after{
+			transform: scale(1);
+		}
+		.moto{
+			position: relative;
+			top: 350px;
+			left:900px
+
+
+		}
+		.poster{
+			display: block;
+		}
+    .poster img{
+      margin-bottom: 0;
+    }
+
+		.copyright
+        {
+            right:0px;
+            bottom:0px;
+            background:#D1D1D1;
+            color:black;
+            display:block;
+            width:100%;
+            text-align:center;
+            z-index: 10;
+			box-shadow: rgba(0, 0, 0, 0.2) 0px -2px 10px -1px,
+			rgb(0 0 0 / 14%) 0px -1px 10px 0px, rgb(0 0 0 / 12%) 0px -1px 10px 0px;
+        }
+		.copyright span
+        {
+			font-family:heiti;
+            position:relative;
+            display:block;
+            left:0;
+
+        }
+      .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center
+            gap: 20px; 
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .text-content {
+            flex: 1; 
+        }
+        .text-content p{
+          font-family: kaiti;
+        }
+        .text-content h1 {
+            color: #333;
+            margin: 0 0 10px 0;
+        }
+        .text-content p {
+            color: #666;
+            margin: 0 0 10px 0;
+        }
+        .container2{
+            width:100%;
+            margin: 0;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center
+            gap: 20px; 
+        }
+        .profile-image2 {
+            width: 600px;
+
+        }
+        .text-content2 {
+          padding-top: 40%;
+          padding-bottom: 40%;
+          padding-left:100px;
+          flex: 1; 
+        }
+        .text-content2 p{
+          font-family: kaiti;
+        }
+        .text-content2 h1{
+          color: #666;
+          font-family: kaiti;
+          font-size: 10;
+        }
+
+	</style>
+</head>
+<body>
+
+	<div class="daohang">
+		<div class="logo">
+			<img src="image10.png" alt="logo">
+			<br>
+			<div class="writeletter">
+				<a href="mailto:ggg@163.com" style="color: rgb(0, 0, 0);">写信给我 mailto:ggg@163.com</a>
+				<img src="image14.png" width="60" height="100"  alt="点赞"/>
+			</div>
+		</div>
+		
+
+	</div>
+	<div>
+		<ul class="item">
+			<li><a href="index.html">Home</a></li>
+			<li><a style="color: rgb(0, 98, 255);">About me</a></li>
+			<li><a href="favouritequotes.html">Favourite Quotes</a></li>
+			<li><a href="album.html">Album</a></li>
+		</ul>
+	</div>
+	<div>
+		<div><img src="image8.jpg" alt="picture" width="100%" margin=0;padding:0;></div>
+    </div>
+    <div class="container">
+      <img src="image16.png" alt="picture" class="profile-image">
+      <div class="text-content">
+          <h1 style="font-family:kaiti;">个人介绍</h1>
+          <hr>
+          <p>学校：华中科技大学</p>
+          <p>专业：计算机科学与技术</p>
+          <p>学号：U202414833</p>
+          <hr style="width: 170px;">
+          <p>兴趣：睡觉 放松 看书</p>
+          <br>
+          <p></p>
+      </div>
+  </div>
+  <div class="container2" style="margin:0;width:100%;">
+    <img src="image2.jpg" alt="picture" class="profile-image2">
+    <div class="text-content2">
+        <h1>“只有阳光而无阴影，只有欢乐而无痛苦，那就不是人生。”</h1>
+        <br>
+        <br>
+        <h1>“成长是一笔交易，我们都是用朴素的童真与未经人事的洁白交换长大的勇气。”</h1>
+        <br>
+        <br>
+        <h1>  “生活坏到一定程度就会好起来，因为它无法更坏。努力过后，才知道许多事情，坚持坚持，就过来了。”</h1>
+    </div>
+</div>
+    <div class="copyright">
+            <span>© 2008 小小版权所有</span><br/>
+            <span>个人网页</span> <br />
+        </div>
+
+	</div>
+</body>
+</html>
